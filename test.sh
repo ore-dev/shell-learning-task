@@ -25,3 +25,10 @@ elif [ `date -d $date > /dev/null 2>&1;` -ne 0 ] ; then
     echo "引数の値は日付ではありません。"
     exit 1
 fi
+
+#payloadfileを編集
+
+
+#payloadfileを出力
+
+

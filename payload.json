@@ -1,0 +1,6 @@
+format:
+{
+        "Dummy1":"value1",
+        "Message":"{\"properties\":{\"toDate\": \"YYYY-MM-DD\", \"executeDate\": \"YYYY-MM-DD\", \"fromDate\": \"YYYY-MM-DD\"}, \"targetWindow\": \"99\"}",
+        "Dummy2": "value3"
+}
