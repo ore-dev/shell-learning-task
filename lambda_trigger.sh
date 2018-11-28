@@ -15,16 +15,18 @@ if [ $# -ne 3 ]; then
 fi
 
 #payloadFilePathが存在するかチェック
-if [ ! -e $file ]; then
-    echo "$fileは存在しません。"
+#jsonかどうかチェックしたい
+#$(echo $file | grep .json > /dev/null) ??
+
+if [ ! -e ./$file　 ]; then
+    echo "指定されたファイル($file)は存在しません。"
     exit 1
 fi
 
 #処理期間が日付形式かチェック
-elif [ `date -d $date > /dev/null 2>&1;` -ne 0 ] ; then
-    echo "引数の値は日付ではありません。"
-    exit 1
-fi
+date -d $date > /dev/null 2>&1;
+dateStatus = $?
+
 
 #payloadfileを編集
 
