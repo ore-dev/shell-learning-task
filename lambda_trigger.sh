@@ -24,10 +24,10 @@ if [ ! -e ./$file　 ]; then
 fi
 
 #処理期間が日付形式かチェック
-date -d $date > /dev/null 2>&1 | sed -e 's/[^-]//g'
-20
-dateStatus = $?
-
+if [ date -d $date > /dev/null 2>&1 | sed -e 's/[^0-9]//g' ]; then
+    echo "日付形式ではありません"
+    exit
+fi
 
 #payloadfileを編集
 
